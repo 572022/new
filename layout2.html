@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin:0px; padding: 0px;
+    }
+     .fa-calendar{color: red}
+    #gt{
+        width: 100%; background-color: rgba(235, 227, 227, 0.363);
+    }
+    #container_gt{
+        width:1000px;margin: 0px auto; display: flex;
+    }
+.gt_left{
+    display: flex; 
+}
+.gt_left li , .gt_left a{
+    list-style: none; padding: 5px; text-decoration: none; color:black; font-size:15px;
+}
+.gt_left li:not(:first-child)::before{
+    content: "/";
+}
+#right{
+    display: flex; position: relative; left:400px;
+}
+#right li , #right a {
+    list-style: none; padding: 4px; font-size: 15px; color: #fff;
+    background-color: red; 
+}
+.menu ul li:nth-child(2){
+    background-color: red;
+}
+#right > li:not(:first-child){
+    border: 1px solid #fff;
+}
+#post{
+    width: 1000px; margin: 0px auto; height: 80px;
+}
+
+
+#post .fa{ font-size: 27px; font-weight: bolder; float: left; line-height: 80px;}
+#post .img_logo img{
+    width:330px;height: 70px; object-fit:cover;float: right;padding-top: 5px;
+}
+.menu {
+    width: 100%;
+}
+.menu ul{
+    display: flex;  margin: 0px auto;background: black; padding-left: 100px;
+  
+}
+.menu li, .menu a{
+    padding-right: 10px;list-style: none;text-decoration: none; color: #fff; padding:5px;
+}
+#back{
+width: 100%; height: 450px; background-image: url("https://th.bing.com/th/id/R.9d057b1711d83f7a98c373a8438c119d?rik=w786%2bbwXlVxmYA&riu=http%3a%2f%2fwallup.net%2fwp-content%2fuploads%2f2015%2f12%2f141791-mountain-clouds-dark-nature-landscape.jpg&ehk=5gLXNq0lMCy3WzJhYqnFn1zlr4NOjaGI3ZW8mYlcAcs%3d&risl=&pid=ImgRaw&r=0");
+background-position-y: -100px;
+   background-repeat:no-repeat; background-size: cover;
+} .nd_back{
+    width:50%; float: left; padding: 25% 7% 3%; color:#fff;
+}
+.nd_right_back { float: right; background-color: rgba(0, 0, 0, 0.479); font-size: 14px;
+}
+.nd_back .fa{ color: red;}
+.list_back img{
+    width: 100px; 
+}
+#back .nd_back button{
+    padding: 2px 8px; background-color: black;color: white; border: none;
+    box-shadow: -5px 0px 0px red; 
+}
+.list_back .fa{ color: red; }
+.list_back{ display: flex; 
+color: #fff; padding: 10px; border: 1px solid rgb(59, 59, 59);}
+.list_back:hover{
+    background-color: rgba(97, 91, 91, 0.397);border: 1px solid #eee;
+}
+.nd_list{
+    padding-top:15px; padding-left: 5px;}
+.main_nd1{
+    width: 1000px; margin: 0px auto;
+}
+.nav_travel{
+    clear: both; 
+}
+ul.nav_travel {
+    display: flex; 
+
+}
+ul.nav_travel a {
+  padding: 10px; text-decoration: none; color:black;
+
+}
+ul.nav_travel li { border: 1px solid;   list-style: none; }
+.main_nd1 span{ background-color: red; color: #fff; }
+.main_nd2{
+    display: grid; 
+    grid-template-columns: 70px 70px 70px;
+    grid-template-rows: 70px 70px;float: right;
+
+}
+.main_nd2 .nav{ padding: 10px; border: 1px solid #eee; color: #fff;
+     display: flex;align-items: center; padding-left: 30px; font-size: 16px;}
+.main_nd2 .nav.fb{background-color: blue;}
+.main_nd2 .nav.tw{ background-color: rgb(38, 197, 197);}
+.main_nd2 .nav.g{background-color: red;}
+.main_nd2 .nav.img{background-color: rgb(5, 75, 5);}
+.main_nd2 .nav.write{background-color: rgb(68, 65, 65);}
+.main_nd2 .nav.chat{background-color: rgba(0, 0, 0, 0.856);}
+#nd1{
+    display: grid; grid-template-columns: 4fr 1fr;clear: both;
+    grid-template-rows: auto 150px  180px; width:900px; margin: 0px auto;
+    grid-gap: 10px;
+    grid-template-areas:
+    "h1 h5"
+    "h2 h3"
+
+    "h2 h4";
+}
+
+.anh_nd1{
+    grid-area: h2;
+}
+.main_nd2{
+    grid-area: h3;
+}
+.contain1{
+    grid-area: h4;
+}
+
+.choice1 {grid-area: h1;background: rgba(73, 72, 72, 0.103); margin-top: 10px;}
+.choice1 span{
+    float: left;
+}
+.choice1 ul{ display: flex;  float: right;}
+.choice1 li {
+    list-style: none; border: 1px solid rgb(128, 125, 125); padding: 3px 6px;background: rgba(0, 0, 0, 0.616); }
+.choice1  a{
+   font-size: 15px;text-decoration: none; color: #eee;
+}
+
+.choice1 span{
+    padding: 3px 5px; background: red; color:#fff;border: 1px solid black;
+   
+}
+ul.ul li:first-child{ background-color: red;  }
+
+.anh_nd1 {
+background-image: url("https://awol.junkee.com/wp-content/uploads/2019/01/Travel-Writing.jpg");
+ width: 100%; height: 100%;  margin: 0;background-size: cover;
+}
+
+.nd_nd1 {color:#fff; position: relative;
+bottom: -83%;}
+.opacity{
+    background: rgba(0, 0, 0, 0.767);padding-left: 10px;font-size: 14px;line-height: 20px;
+}
+.icon{
+    background: red; padding-left: 10px;
+}
+.contain1 { background-image: url("https://th.bing.com/th/id/R.8b4c17ac948672ce56ca83b12ef221c8?rik=FE4mZ843QfoWvw&riu=http%3a%2f%2fs6.favim.com%2forig%2f151203%2fbest-friends-forever-bff-cute-friends-Favim.com-3698966.jpg&ehk=U%2fC%2frySVwwtJwIR1EEyrjjHoghMVhzjHPU4Tt4tLTjc%3d&risl=&pid=ImgRaw&r=0");
+background-size: cover; background-position-y: -71px; border: 1px solid rgba(128, 128, 128, 0.842);
+}
+.contain1 .title{
+     position: relative; transform: translateY(70px);
+  background: #fff;height: 0px auto;
+     
+     }
+span.out {background: black; color: #eee; width: 50px; padding: 3px; margin-top: 10px;
+height: 20px;}
+.travel {background: red;}
+ #nd2{
+        display: grid;width: 900px; margin: 0px auto;
+        grid-template-columns: 1fr 1fr 210px;
+        grid-template-rows: auto auto; grid-gap: 10px;
+    grid-template-areas:
+    "h1 h1 h2"
+    "h3 h4 h5";
+
+        
+    }
+    .travel{ grid-area: h1;}
+    .travel{ grid-area: h3;}
+    .anh1{ grid-area: h3;}
+    .anh2{ grid-area: h4;}
+    .anh3{ grid-area: h5;}
+
+    .anh1 img , .anh2 img {width:100%;height: 80%; }
+  .anh3 li{
+      list-style: none; border: 1px solid rgb(43, 40, 40);
+      padding:10px;
+  } 
+  .anh3 li:hover{
+      background-color: rgba(204, 203, 203, 0.219);
+  }
+  .anh3 ul{ border: 1px solid rgba(128, 128, 128, 0.507); box-shadow: 0px 0px 2px 0px;}
+  .anh3 .fa{ color: red} 
+.nd_anh2{ background-color: red; color: #eee;padding-left: 10px;}
+.nd_anh2 ul{
+    display: flex; 
+}
+.nd_anh2 li {
+    padding-left: 10px; list-style: none; 
+}
+.nd_anh2 li:not(:nth-child(n+3))::after{
+    content: "/";
+}
+.nd_anh2 a{
+    color: #fff; font-size: 14px;
+}
+.nd_anh2 span{ padding-left: 40px;}
+</style>
+<body>
+    <div id="gt">
+        <div id="container_gt">
+        <ul class="gt_left">
+            <li><a href="#">Lorem ipsum dolor sit </a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Select</a></li>
+            <li><a href="#">Ob</a></li>
+
+        </ul>
+    <ul id="right">
+        <li><a href="#"> <i class="fa fa-id-card" aria-hidden="true"></i></a></li>
+        <li><a href="#"> <i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        <li><a href="#"> <i class="fa fa-comments-o" aria-hidden="true"></i></a></li>
+        <li><a href="#"> <i class="fa fa-twitter" aria-hidden="true"></i></i></a></li>
+        <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></i></a></li>
+        <li><a href="#"> <i class="fa fa-instagram" aria-hidden="true"></i></i></a></li>
+    </ul></div>
+    </div>
+    <div id="post">
+        <div class="logo">
+            <i class="fa fa-ravelry" aria-hidden="true">EPAL Solution</i>
+        </div>
+        <div class="img_logo">
+            <img src="https://wallpapercave.com/wp/Idswz1I.jpg"> 
+        </div>
+    </div>
+   <div class="menu">
+       <ul>
+        <li><a href="#"><i class="fa fa-bars" aria-hidden="true"></i> </a></li>
+        <li><a href="#">Home</i> </a></li>
+        <li><a href="#">HTML</i> </a></li>
+        <li><a href="#">CSS</i> </a></li>
+        <li><a href="#">PHP</i> </a></li>
+           <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i> </a></li>
+       </ul>
+   </div>
+   <div id="back">
+       <div class="nd_back">
+           <button>New</button><br>
+           <h1>Watching Global Warming In Action</h1><br>
+           <i class="fa fa-laptop" aria-hidden="true"></i> 24/1/2021<br>
+           Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Maxime facilis minima consectetur dolores quis vel quia culpa perspiciatis explicabo facere! 
+
+       </div>
+       <div class="nd_right_back">
+        <div class="list_back">
+
+<img src="https://cdn.images.express.co.uk/img/dynamic/78/750x445/1553955.jpg">
+<div class="nd_list">
+<span>Global Warming In Action</span> <br>
+<i class="fa fa-tag" aria-hidden="true"></i>January 24th 2022</div>
+</div>
+<div class="list_back">
+
+<img src="https://cdn.images.express.co.uk/img/dynamic/78/750x445/1553955.jpg">
+<div class="nd_list">
+<span>Global Warming In Action</span> <br>
+<i class="fa fa-tag" aria-hidden="true"></i>January 24th 2022</div>
+</div> <div class="list_back">
+
+<img src="https://cdn.images.express.co.uk/img/dynamic/78/750x445/1553955.jpg">
+<div class="nd_list">
+<span>Global Warming In Action</span> <br>
+<i class="fa fa-tag" aria-hidden="true"></i>January 24th 2022</div>
+</div> <div class="list_back">
+
+<img src="https://cdn.images.express.co.uk/img/dynamic/78/750x445/1553955.jpg">
+<div class="nd_list">
+<span>Global Warming In Action</span> <br>
+<i class="fa fa-tag" aria-hidden="true"></i>January 24th 2022</div>
+</div> <div class="list_back">
+
+<img src="https://cdn.images.express.co.uk/img/dynamic/78/750x445/1553955.jpg">
+<div class="nd_list">
+<span>Global Warming In Action</span> <br>
+<i class="fa fa-tag" aria-hidden="true"></i>January 24th 2022</div>
+</div>
+   </div></div>
+       <div id="nd1">
+         <div class="choice1">
+          <div class="travel"><span>Travel</span></div>
+            <ul class="ul">
+                <li><a href="#">Du lịch</a></li>
+                <li><a href="#">Viet Nam</a></li>
+                <li><a href="#">Trung Quốc</a></li>
+                <li><a href="#">Hàn Quốc</a></li>
+               
+            </ul>
+         </div>
+           <div class="anh_nd1">
+                <div class="nd_nd1">
+               <div class="opacity">
+                    <h3>The Valid Fashion Style For Thí Fall</h3>
+                    <i class="fa fa-calendar" aria-hidden="true"></i>January 24th 2022
+                </div>
+                  
+                        <div class="icon">
+                            <div class="nd_anh2">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-share-alt" aria-hidden="true">Share</i> </a></li>
+                                    <li><a href="#"> <i class="fa fa-comments" aria-hidden="true">Comment</i></a></li>
+                                    <li><a href="#"> <i class="fa fa-eye" aria-hidden="true">Views</i></a></li>
+                                  
+                                </ul>
+                               
+                             </div>
+                   
+                  </div>
+               </div>
+           </div>
+         <span class="out">Liên hệ</span>
+            <div class="main_nd2">
+         
+                <div class="nav fb"><i class="fa fa-facebook" aria-hidden="true"></i>
+                </div>
+                <div class="nav tw"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+                <div class="nav g"> <i class="fa fa-google-plus" aria-hidden="true"></i></div>
+                <div class="nav img"><i class="fa fa-picture-o" aria-hidden="true"></i></div>
+                <div class="nav write"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></div>
+                <div class="nav chat"><i class="fa fa-comments-o" aria-hidden="true"></i></div>
+          
+           </div>
+         
+           <div class="contain1">
+               
+            <div class="title">
+                <h3>Travel With My Best Friend</h3><br>
+                <i class="fa fa-calendar" aria-hidden="true"></i>January 24th 2022
+            </div>
+           </div>
+          
+       </div>
+    </div>
+    <div id="nd2">
+        <div class="choice1">
+            <div class="travel"><span>Travel</span></div>
+           </div>
+        <div class="anh anh1">
+            <img src="https://th.bing.com/th/id/R.d76d701e7bf5fb33f7f771ab23cb2f8f?rik=E6Ls2Z76DzbJ3w&pid=ImgRaw&r=0" alt="ảnh lỗi">
+            <div class="nd">
+                <h4>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h4>
+                <i class="fa fa-calendar" aria-hidden="true"></i>January 24th 2022
+            </div>
+            <div class="nd_anh2">
+               <ul>
+                   <li><a href="#"><i class="fa fa-share-alt" aria-hidden="true">Share</i> </a></li>
+                   <li><a href="#"> <i class="fa fa-comments" aria-hidden="true">Comment</i></a></li>
+                   <li><a href="#"> <i class="fa fa-eye" aria-hidden="true">Views</i></a></li>
+                   <li><a href="#"> <span><i class="fa fa-envelope" aria-hidden="true">E-mail</i></span></a></li>
+               </ul>
+              
+            </div>
+        </div>
+        <div class="anh anh2">
+            <img src="https://th.bing.com/th/id/R.9ac3edc4e053432dc7fb4dc82da93179?rik=sYR0YxPmehY3oQ&riu=http%3a%2f%2fwww.funbuzztime.com%2fwp-content%2fuploads%2f2015%2f03%2fPina-Colada.jpg&ehk=pVlRJQbU0Z0i0nxeo%2fNL%2b3CAhL%2bpMccKHW5Mukj70gg%3d&risl=&pid=ImgRaw&r=0">
+            <div class="nd">
+                <h4>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h4>
+                <i class="fa fa-calendar" aria-hidden="true"></i>January 24th 2022
+            </div>
+         
+                <div class="nd_anh2">
+                    <ul>
+                        <li><a href="#"><i class="fa fa-share-alt" aria-hidden="true">Share</i> </a></li>
+                        <li><a href="#"> <i class="fa fa-comments" aria-hidden="true">Comment</i></a></li>
+                        <li><a href="#"> <i class="fa fa-eye" aria-hidden="true">Views</i></a></li>
+                        <li><a href="#"> <span><i class="fa fa-envelope" aria-hidden="true">E-mail</i></span></a></li>
+                    </ul>
+                
+            </div>
+        </div>
+        <span class="out">Tin tức</span>
+        <div class=" anh3">
+            <ul>
+                <li><a href="#"><i class="fa fa-bookmark-o" aria-hidden="true"> </i>Tin tức</a><br>
+                    <i class="fa fa-calendar" aria-hidden="true"> </i>January 24th 2021
+                </li>
+                <li><a href="#"><i class="fa fa-bookmark-o" aria-hidden="true"> </i>Tin tức</a><br>
+                    <i class="fa fa-calendar" aria-hidden="true"> </i>January 24th 2021
+                </li>
+                <li><a href="#"><i class="fa fa-bookmark-o" aria-hidden="true"> </i>Tin tức</a><br>
+                    <i class="fa fa-calendar" aria-hidden="true"> </i>January 24th 2021
+                </li>
+                <li><a href="#"><i class="fa fa-bookmark-o" aria-hidden="true"> </i>Tin tức</a><br>
+                    <i class="fa fa-calendar" aria-hidden="true"> </i>January 24th 2021
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
